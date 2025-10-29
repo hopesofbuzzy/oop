@@ -1,12 +1,30 @@
 class Phone:
+    # Атрибут класса.
     line_type = 'проводной'
+    
+    def __init__(self, dial_type_value):
+        # Атрибут объекта.
+        self.dial_type = dial_type_value
 
 
-rotary_phone = Phone()
-keypad_phone = Phone()
-rotary_phone.line_type = 'Беспроводной'
+# Создать объект класса Phone.
+rotary_phone = Phone(dial_type_value='дисковый')
+keypad_phone = Phone(dial_type_value='кнопочный')
 
-# Печать содержимого атрибута line_type через объект rotary_phone.
-print(rotary_phone.line_type)
-# Печать содержимого атрибута line_type через объект keypad_phone.
-print(keypad_phone.line_type)
+# Распечатать значение атрибута класса.
+print(f'Тип линии: {rotary_phone.line_type}')
+print(f'Тип линии: {keypad_phone.line_type}')
+
+# Поменять значение атрибута line_type для объекта rotary_phone.
+rotary_phone.line_type = 'радио'
+
+# Снова распечатать значения.
+print(f'Тип линии: {rotary_phone.line_type}')
+print(f'Тип линии: {keypad_phone.line_type}')
+
+# Поменять значение атрибута класса через класс.
+Phone.line_type = 'спутниковый'
+
+# Снова распечатать значения.
+print(f'Тип линии: {rotary_phone.line_type}')
+print(f'Тип линии: {keypad_phone.line_type}')
