@@ -23,6 +23,7 @@ class MobilePhone(Phone):
 
 rotary_phone = Phone('дисковый')
 mobile_phone = MobilePhone('сенсорный')
+# mobile_phone.
 
 # Распечатать значение атрибута line_type для объекта класса Phone.
 print(rotary_phone.line_type)
